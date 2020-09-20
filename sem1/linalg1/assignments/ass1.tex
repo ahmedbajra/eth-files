@@ -1,0 +1,111 @@
+
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper]{geometry}
+\usepackage[shortlabels]{enumitem}
+
+\makeatletter
+\renewcommand{\@seccntformat}[1]{}
+\makeatother
+
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+\setlength\parindent{0pt}
+
+\title{Serie 1 - Bonusaufaben}
+\author{Ahmed Bajra}
+\date{2020-09-20}
+
+\begin{document}
+
+    \maketitle
+
+    \section{Aufgabe 1}
+    \subsection{Überlegungen}
+
+    Gegeben sei ein Lineares Gleichungssystem
+    \begin{align*}
+        a_1 x_1 + a_2 x_2& = a_3 \\
+        b_1 x_1 + b_2 x_2& = b_3
+    \end{align*}
+
+    Dann gilt: 
+
+    \begin{equation}
+        \begin{gathered}
+            \\
+            \text{Gleichungssystem hat beliebig viele Lösungen wenn: } \\
+            \begin{bmatrix}
+                a_1 \\
+                a_2 \\
+                a_3
+            \end{bmatrix}
+            = c \cdot
+            \begin{bmatrix}
+                b_1 \\
+                b_2 \\
+                b_3
+            \end{bmatrix} \\
+            \text{Da dann die erste Gleichung mittels der Zweiten ausgedrückt werden kann}\\
+            \text{und es darum effektiv nur eine Gleichung mit zwei Unbekannten gibt}
+            \\
+        \end{gathered}
+    \end{equation}
+
+
+    \begin{equation}
+        \begin{gathered}
+            \\
+            \text{Gleichungssystem hat keine Lösung wenn: } \\
+            \begin{bmatrix} a_i \\ a_j \end{bmatrix}
+            = c \cdot \begin{bmatrix} b_i \\ b_j \end{bmatrix}, 
+            a_k \neq cb_k \\
+            \text{Da dadurch Gleichungen der folgenden Art resultieren: } \\
+            a_k = b_k (\text{obere Bedingung ist aber }  a_k \neq cb_k) \\
+            a_k x_k = b_k x_k (\text{hat beliebig viele Lösungen, wenn } x_k=0)\\
+            \\
+        \end{gathered}
+    \end{equation}
+
+    \begin{equation}
+        \begin{gathered}
+            \\
+            \text{Gleichungssystem hat genau eine Lösung, wenn weder } (1) \text{ noch } (2) \text{ der Fall ist}
+            \\ \\
+        \end{gathered}
+    \end{equation}
+
+    \newpage
+
+    \subsection{Resultate}
+
+    \begin{enumerate}[(a)]
+    \item $(2) \Rightarrow $ keine Lösung
+    \item $(1) \Rightarrow $ beliebig viele Lösungen
+    \item $(2) \Rightarrow \begin{cases} \text{beliebig viele Lösungen für }x_1,& \text{wenn } x_2=0 \\ \text{keine Lösung }& \text{sonst} \end{cases}$ 
+    \item $(1) \Rightarrow $ beliebig viele Lösungen
+    \item Eine Lösung, da die zweite Gleichung eine Lösung für $x_3$ liefert und für die beiden anderen Gleichungen (3) gilt
+    \item $(1) \Rightarrow $ beliebig viele Lösungen
+    \item $(2) \Rightarrow $ keine Lösung (Vergleich: Koeffizienten der 1. und 3. Gleichung)
+    \end{enumerate}
+
+    \section{Aufgabe 2}
+    (f) und (g) haben die jeweils linken Teile der Gleichungen gemeinsam und unterscheiden sich in den Rechten. 
+
+    Da bei (f) alles $=0$ gesetzt wird und die Koeffizienten wie nach (1) ein vielfaches voneinander sind, ergibt sich aus den drei Gleichungen immer dieselbe. 
+    Für drei Unbekannte ist diese eine Gleichung nicht ausreichend, weshalb daraus beliebig viele Lösungen zustande kommen.
+
+    Bei (g) würden die ersten zwei Gleichungen dasselbe wie bei (f) bedeuten, doch die dritte ist wiedersprüchlich:
+
+    \begin{align*}
+        &(\rom{1}): & 2x_1 + x_2 + x_3& = 2 \\
+        &3 \cdot (I) \rightarrow & 3(2x_1 + x_2 + x_3)& = 3\cdot2 \\
+        & =& 6x_1 + 3x_2 + 3x_3& = 6 \\ \\
+        &(\rom{3}): & 6x_1 + 3x_2 + 3x_3& = 8 \neq 6 \\
+    \end{align*}
+
+\end{document}
