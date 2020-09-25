@@ -16,7 +16,7 @@
 
 \setlength\parindent{0pt}
 
-\title{Serie 1 - Bonusaufaben}
+\title{Serie 1}
 \author{Ahmed Bajra}
 \date{2020-09-20}
 
@@ -24,8 +24,9 @@
 
     \maketitle
 
-    \section{Aufgabe 1}
-    \subsection{Überlegungen}
+    \section{Bonusaufaben}
+    \subsection{Aufgabe 1}
+    \subsubsection{Überlegungen}
 
     Gegeben sei ein Lineares Gleichungssystem
     \begin{align*}
@@ -66,7 +67,7 @@
             a_k \neq cb_k \\
             \text{Da dadurch Gleichungen der folgenden Art resultieren: } \\
             a_k = b_k (\text{obere Bedingung ist aber }  a_k \neq cb_k) \\
-            a_k x_k = b_k x_k (\text{hat beliebig viele Lösungen, wenn } x_k=0)\\
+            a_k x_k = b_k x_k (\text{hat nur Lösungen, wenn } x_k=0)\\
             \\
         \end{gathered}
     \end{equation}
@@ -81,7 +82,7 @@
 
     \newpage
 
-    \subsection{Resultate}
+    \subsubsection{Resultate}
 
     \begin{enumerate}[(a)]
     \item $(2) \Rightarrow $ keine Lösung
@@ -93,7 +94,7 @@
     \item $(2) \Rightarrow $ keine Lösung (Vergleich: Koeffizienten der 1. und 3. Gleichung)
     \end{enumerate}
 
-    \section{Aufgabe 2}
+    \subsection{Aufgabe 2}
     (f) und (g) haben die jeweils linken Teile der Gleichungen gemeinsam und unterscheiden sich in den Rechten. 
 
     Da bei (f) alles $=0$ gesetzt wird und die Koeffizienten wie nach (1) ein vielfaches voneinander sind, ergibt sich aus den drei Gleichungen immer dieselbe. 
@@ -106,6 +107,57 @@
         &3 \cdot (I) \rightarrow & 3(2x_1 + x_2 + x_3)& = 3\cdot2 \\
         & =& 6x_1 + 3x_2 + 3x_3& = 6 \\ \\
         &(\rom{3}): & 6x_1 + 3x_2 + 3x_3& = 8 \neq 6 \\
+    \end{align*}
+
+    \newpage
+
+    \section{Aufgaben zum Rang}
+
+    \subsection{Aufgabe 1}
+
+    Auf das gegebene LGS treffen folgende Aussagen zu:
+
+    \begin{itemize}
+        \item (a)
+        \item (c)
+        \item (d)
+    \end{itemize}
+
+    \subsection{Aufgabe 2}
+
+    \begin{align*}
+        &(I):& x_1 &+& x_2 &+& 2x_3 &+& 2x_4 &=& b_1 \\
+        &(II):& x_1 &+& 2x_2 &+& 3x_3 &+& 4x_4 &=& b_2 \\
+        &(III):& x_1 &+& 3x_2 &+& 6x_3 &+& 10x_4 &=& b_3 \\
+        &(IV):& x_1 &+& 4x_2 &+& 10x_3 &+& 20x_4 &=& b_4 \\ \\
+        &(V) = (II) - (I):&&& x_2 &+& x_3 &+& 2x_4 &=& b_2 - b_1 \\ 
+        &(VI) = (III) - (II) - (V):&&&&& 3x_3 &+& 4x_4 &=& b_3 - 2b_2 + b_1 \\
+        &(VII) = (IV) - (III) - (V) - (VI):&&&&&&& 4x_4 &=& b_4 - 2b_3 + b_2 
+    \end{align*}
+
+    \begin{align*}
+        &\Leftrightarrow& x_4 &= \frac14 b_4 - \frac12 b_3 + \frac14 b_2 \\
+        &\Leftrightarrow& x_3 &= -\frac13 b_4 - b_3 - b_2 + \frac13 b_1 \\
+        &\Leftrightarrow& x_2 &= -\frac16 b_4 + 2b_3 + \frac52 b_2 - \frac43 b_1 \\
+        &\Leftrightarrow& x_1 &= -\frac13 b_4 + b_3 + \frac53 b_1 \\
+    \end{align*}
+
+    \begin{enumerate}[a)]
+        \item $x_1 = 3, x_2 = \frac{22}{3} , x_3 = \frac{16}{3}, x_4 = \frac14$
+        \item $x_1 = \frac53, x_2 = \frac{53}{6}, x_3 = \frac23, x_4 = -\frac32$
+        \item $x_1 = \frac73, x_2 = 3, x_3 = -2, x_4 = 0$
+    \end{enumerate}
+
+    % \newpage
+
+    \subsection{Aufgabe 3}
+
+    \begin{align*}
+        &(I):& 3x_1 &+& 4x_2 &+& 2x_3 &=& 8 \\
+        &(II):& x_1 &+& 3x_2 &-& x_3 &=& 2 \\\\
+        &(I) - 3(II) =&&& -5x_2 &+& 5x_3 &=& 2 \\
+        &\Leftrightarrow &&& x_2 && &=& x_3 - \frac25 \\
+        &\Leftrightarrow& x_1 &&&&&=& x_3 - \frac25
     \end{align*}
 
 \end{document}
