@@ -1,0 +1,130 @@
+
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper]{geometry}
+\usepackage[shortlabels]{enumitem}
+\usepackage{hyperref}
+
+\makeatletter
+\renewcommand{\@seccntformat}[1]{}
+\makeatother
+
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+\setlength\parindent{0pt}
+
+\title{Analysis Übung 1}
+\author{Ahmed Bajra}
+\date{2020-09-25}
+
+
+\begin{document}
+    \maketitle
+
+    \section{Allgemeine Infos}
+    email: melaniol@student.ethz.ch
+
+    Alle zwei Wochen Schnellübung: Freitag 16:15 - 17:45
+
+    \subsection{Serieabgabe}
+    \begin{itemize}
+        \item Abgabe bis Mittwoch 12:00
+        \item bis zu zwei Aufgaben werden korrigiert
+        \item Aufgaben markieren die korrigiert werden sollen
+        \item Schöne Darstellung
+    \end{itemize}
+
+    \subsection{Zwischenprüfung}
+    \begin{itemize}
+        \item Anfang Frühjahrssemester
+        \item Alle Fragen sind MC
+        \item Teilnahme ist freiwillig
+        \item Wird Notenbonus von 20\% geben (nur aufwertend)
+    \end{itemize}
+
+    \subsection{Basisprüfung}
+    Hilfsmittel:
+    \begin{itemize}
+        \item handgeschrieben und vermutlich 10 Seiten
+        \item Auf \url{amiv.ethz.ch} alte Zusammenfassung suchen
+        \item Alle wichtigen Formeln sind auf Theorieblättern
+        \item Formelbuch auch erlaubt (Passerelle Formelbuch :))
+        \item Kein Taschenrechner
+    \end{itemize}
+
+    \subsection{Ablauf}
+    \begin{itemize}
+        \item Besprechung vorherige Serie
+        \item Kurze Einführung neues Thema
+        \item Besprechung neue Theorie
+        \item Tipps für neue Serie
+    \end{itemize}
+
+    Schnellübungen:
+
+    \begin{itemize}
+        \item Hinweise für Serie
+        \item Selbstständiges Lösen
+        \item Besprechnug schwerste Aufgaben (letzte 15min)
+    \end{itemize}
+
+    Vorschläge willkommen
+
+    Theorieblatt der Übung: \url{n.ethz.ch/~melaniol}
+
+    \subsection{Tipps}
+
+    Fragen über Fragen
+    \begin{itemize}
+        \item Alles Freiwillig
+        \item Aufzeichnungen statt live Vorlesung
+        \item Freiwillige Serien abgeben nicht nötig
+        \item Lernorte
+    \end{itemize}
+
+    Weiteres:
+    \begin{itemize}
+        \item Zusammenfassung stets verwenden
+        \item Prüfungsbedingungen verinnerlichen
+        \item Serien lösen
+        \item Nicht zu lange an einer Aufgabe
+        \item Überblick über alle Fächer beihalten
+        \item Basisprüfung ist noch weit weg
+    \end{itemize}
+
+    \newpage
+
+    \section{Übung}
+
+    \subsection{Bsp 1)}
+    Berechne die rekursive und explizite Darstellung der Folge aller ungeraden Zahlen, beginnend bei 3
+
+    Folge: $3, 5, 7, 9\dots$
+
+    Explizite Darstellung: 
+    \begin{gather*}
+        a_1 = 3 = 2n+1 = 3n = 4n-1 \\
+        a_2 = 5 = 2n+1 \neq 3n \neq 4n-1 \\
+        \Rightarrow a_n = 2n+1, n= 1,2\dots
+    \end{gather*}
+
+    Rekursive Darstellung:
+
+    Explizite Darstellung ist bekannt:
+    \begin{align*}
+        a_n &= \textbf{2n+1} \\
+        a_{n+1} &= 2(n+1) +1\\
+        &= \textbf{(2n+1)} +2 \\
+        &= a_n+2\\
+        \Rightarrow a{n+1} &=a_n+2
+    \end{align*}
+
+    \subsection{Eigenschaften}
+    \subsubsection{Monotonie}
+
+\end{document}

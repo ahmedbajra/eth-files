@@ -1,0 +1,80 @@
+
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper]{geometry}
+\usepackage[shortlabels]{enumitem}
+\usepackage{hyperref}
+
+\makeatletter
+\renewcommand{\@seccntformat}[1]{}
+\makeatother
+
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+\setlength\parindent{0pt}
+
+\title{Analysis Übung 2}
+\author{Ahmed Bajra}
+\date{2020-09-25}
+
+\begin{document}
+    \maketitle
+
+    \section{Übungen}
+    8b)
+
+    \begin{align*}
+        a_n & =  \sum_{1\leq k\leq n}\frac{k}{n^2} \\
+        & =  \frac{1}{n^2}\frac{n(n+1)}{2}\\
+        & =  \frac12 + \frac1{2n}\\
+        \lim_{n\rightarrow\infty}a_n & =  \frac12 \Rightarrow (\text{Konvergiert}) \\
+        \\
+        a_{n+1} = \frac12 + \frac{1}{2(n+1)} & <  a_n \Rightarrow  \text{Strikt monoton fallend}
+    \end{align*}
+
+    8d)
+
+    \begin{align*}
+        a_1&=0\\
+        a_2&=1\\
+        a_n&=\frac12(a_{n-1}+a_{n-2})\\
+        a_{n+2}-a_{n+1} &= \frac12(a_{n+1}+a_n) - a_{n+1}\\
+        &= \frac12(a_n - a_{n+1})\\
+        &= -\frac12(a_{n+1} -a_n) \\
+        &= \left(-\frac12\right)^2(a_{\underline{n}}-a_{n-1}) \\
+        &= \left(-\frac12\right)^{n-k+2}(a_{k}-a_{k-1}) \\
+        &= \left(-\frac12\right)^{n}(a_{2}-a_{1}) = \left(-\frac12\right)^{n} \\
+    \end{align*}
+
+    \newpage
+
+    \begin{align*}
+        a_{n+2}-a_{n+1} &= \left(-\frac12\right)^{n} \\
+        a_n &= a_1 &+ (a_2 - a_1) &+ \dots &+ (a_{n-1} - a_{n-2}) &+ (a_n - a_{n-1})\\
+        &= a_1 &+ 1 &+ \dots &+  \left(-\frac12\right)^{n-3} &+  \left(-\frac12\right)^{n-2}\\
+        &= \sum_{0\leq k \leq n-2}\left(-\frac12\right)^{k} 
+    \end{align*}
+
+    9a) Fibonacci
+
+    \begin{align*}
+        a_n &:= a_{n-1} + a_{n-2} \\
+        b_n &= \frac{a_n}{a_{n-1}} \\
+        &= \frac{a_{n-1} + a_{n-2}}{a_{n-1}}\\
+        &= 1 + \frac{a_{n-1}}{a_{n-2}} \\
+        &= 1 + \frac1{b_{n-1}} \\
+        b_1 &= 1 \leq b_n  \\
+        1 + \frac1{b_{n-1}} &\leq 2 \\
+        \Rightarrow & 1 \leq b_n \leq 2
+    \end{align*}
+
+    \newpage
+
+    
+
+\end{document}

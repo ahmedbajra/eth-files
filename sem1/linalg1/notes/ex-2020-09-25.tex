@@ -1,0 +1,154 @@
+
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper]{geometry}
+\usepackage[shortlabels]{enumitem}
+
+\makeatletter
+\renewcommand{\@seccntformat}[1]{}
+\makeatother
+
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+\setlength\parindent{0pt}
+
+\title{Linalg Übung 2}
+\author{Ahmed Bajra}
+\date{2020-09-25}
+
+\begin{document}
+
+    \maketitle
+
+    \section{Lineare Gleichungssysteme (LGS)}
+    Beispiel
+    \begin{align*}
+        x + 3y &= 11 \\
+        4x + 5y &= 23 \\\\
+        x = 2&, y = 3
+    \end{align*}
+    
+    Menge aller Lösungen: Lösungsmenge $\mathbb{L}$
+
+    \section{LGS A und B sind \underline{äquivalent}, wenn sie exakt dieselbe Lösungsmenge haben}
+
+    \section{Matrix}
+
+    \begin{align*}
+        &a_{11}x_1 + a_{12}x_2 + \dots a_{1n}x_n = b_1 \\ 
+        &a_{21}x_1 + a_{22}x_2 + \dots a_{2n}x_n = b_2 \\
+        &\dots \\ 
+        &a_{m1}x_1 + a_{m2}x_2 + \dots a_{mn}x_n = b_m \\ 
+    \end{align*}
+
+    \begin{align*}
+        \begin{bmatrix}
+            a_{11} & \dotsb & a_{1n} \\
+            \dotsb&\dotsb&\dotsb \\
+            a_{m1} & \dotsb & a_{mn}
+        \end{bmatrix} 
+        \cdot
+        \begin{bmatrix}
+            x_1 \\ 
+            \dotsb \\ 
+            x_n
+        \end{bmatrix} 
+        = 
+        \begin{bmatrix}
+            b_1 \\
+            \dotsb \\
+            b_m
+        \end{bmatrix}
+    \end{align*}
+
+    \newpage
+
+    \section{Gaussverfahren}
+    \begin{enumerate}[I)]
+        \item Vertauschen von Gleichungen
+        \item Addieren eines Vielfachen einer Gleichung zu einer anderen
+    \end{enumerate}
+
+    \subsection{Kochrezept}
+
+    \begin{enumerate}[1)]
+        \item LGS auf Dreiecksform bringen mittels Operationen I) und II)
+        \item Rückwärtseinsetzen uum Lösung zu finden
+    \end{enumerate}
+
+    \begin{align*}
+        3x_1 + 18x_2 + 7x_3 &= 69 \\
+        x_1 + 4x_4 + 2x_3 &= 18 \\
+        2x_1 + 14x_2 + 8x_3 &= 60
+    \end{align*}
+
+    \begin{align*}
+        \rightarrow 
+        \begin{bmatrix}
+            3 & 18 & 7 \\
+            1 & 4 & 2 \\
+            2 & 14 & 8
+        \end{bmatrix}
+        \begin{bmatrix}
+            x_1 \\ x_2 \\ x_3
+        \end{bmatrix}
+        = 
+        \begin{bmatrix}
+            69 \\ 18 \\ 60
+        \end{bmatrix}
+    \end{align*}
+
+    I) auf 1. und 2. Gleichung anwenden
+
+    
+    \begin{align*}
+        \rightarrow 
+        \begin{bmatrix}
+            1 & 4 & 2 \\
+            3 & 18 & 7 \\
+            2 & 14 & 8
+        \end{bmatrix}
+        \begin{bmatrix}
+            x_1 \\ x_2 \\ x_3
+        \end{bmatrix}
+        = 
+        \begin{bmatrix}
+            18 \\ 69 \\ 60
+        \end{bmatrix}
+    \end{align*}
+
+    II) (2.) - 3 (1); (3.) + 2 (1.)
+
+    II) (3.) - (2) 
+
+    $\rightarrow$
+
+    \begin{align*}
+        &\begin{bmatrix}
+           1 & 4 & 2 &|& 18 \\
+            0 & 6 & 1 &|& 15 \\
+            0 & 0 & 3 &|& 9
+        \end{bmatrix} \\&\text{Dreiecksform}\\
+        &\Rightarrow x_3 = 3 \\
+        &\Rightarrow x_2 = 2 \\
+        &\Rightarrow x_1 = 4
+    \end{align*}
+
+    \newpage
+    \section{Tipps Serie 1}
+
+    \begin{enumerate}[(1)]
+        \item MC-Aufgabe auf "echo" lösen
+        \item Immer gleiche Matrix, verschiedene $\vec{b}, \rightarrow$ Nach $\vec{b}$ lösen
+        \subitem alternativ: Auf Dreiecksform Reduzieren, dann nach Aufgaben lösen
+        \item Gauss 
+        \item Nicht nötig
+        \item Nicht nötig
+    \end{enumerate}
+    
+\end{document}
