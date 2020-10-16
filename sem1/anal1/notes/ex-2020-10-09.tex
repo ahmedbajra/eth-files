@@ -1,0 +1,59 @@
+
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper]{geometry}
+\usepackage[shortlabels]{enumitem}
+\usepackage{hyperref}
+
+\makeatletter
+\renewcommand{\@seccntformat}[1]{}
+\makeatother
+
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+\setlength\parindent{0pt}
+
+\title{Analysis Übung 3}
+\author{Ahmed Bajra}
+\date{2020-10-09}
+
+\begin{document}
+    \maketitle
+
+    \section{Übungen}
+    A6e) \[\lim_{x\to\frac\pi2}(\frac\pi2-x)\tan x \]
+
+    \begin{align*}
+        \tan x &= \frac{\sin x}{\cos x} \\
+        \lim_{x\to0}\frac{\sin (ax)}{x} &= a\\
+        \lim_{x\to\frac\pi2}\frac{\frac\pi2 -x}{\cos x}&\sin x \\
+        y=\frac\pi2-x \rightarrow \lim_{x\to\frac\pi2}y&=\lim_{x \to \frac\pi2}\frac\pi2 - x = 0^+ \\
+        \Rightarrow x &=\frac\pi2 - y \\
+        \Rightarrow \lim_{y\to0^+}\frac{\frac\pi2-\frac\pi2 + y}{\cos (\frac\pi2 - y)}\sin (\frac\pi2-y)&=\lim_{y\to0^+}\frac{y}{\sin}\sin (\frac\pi2 - y)\\
+        = 1\cdot1&=1
+    \end{align*}
+
+    A6f)
+
+    \begin{align*}
+        l &= \lim_{x\to+\infty}\frac{x}2\left(\frac1{\cos\frac\pi{x}}\right)^2\sin\frac{2\pi}{x}\\
+        &\text{sub: }y:=\frac1x \\
+        &\lim_{x\to+\infty}y=0^+\\
+        \Rightarrow l &= \lim_{y\to 0^+}\frac1{2y}\left(\frac1{cos (\pi y)}\right)^2 sin(2\pi y)\\
+        &\lim_{y\to 0^+}\frac1{\cos (\pi y)} = 1\\
+        \Rightarrow l& = \frac12\frac{sin(2\pi y)}{y} = \frac12 2\pi = \pi
+    \end{align*}
+
+    \newpage
+
+    
+
+
+
+
+\end{document}

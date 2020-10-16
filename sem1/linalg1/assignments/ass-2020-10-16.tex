@@ -1,0 +1,156 @@
+
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper]{geometry}
+\usepackage[shortlabels]{enumitem}
+\usepackage{hyperref}
+
+\makeatletter
+\renewcommand{\@seccntformat}[1]{}
+\makeatother
+
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+\setlength\parindent{0pt}
+
+\title{Bonusaufgaben 3}
+\author{Ahmed Bajra}
+\date{2020-10-09}
+
+\begin{document}
+    \maketitle
+
+    \section{Aufgabe (a)}
+
+    \begin{enumerate}[(i)]
+        \item 
+        \begin{align*}
+            IG = \begin{pmatrix}
+                2 & 3\\
+                4 & 2
+            \end{pmatrix} \\
+            GI = \begin{pmatrix}
+                2 & 3 \\
+                4 & 2
+            \end{pmatrix}\\
+            \Rightarrow GI=IG
+        \end{align*}
+        \item 
+        \begin{align*}
+            DH = \begin{pmatrix}
+                15 & 9\\
+                12 & 6
+            \end{pmatrix} \\
+            HD = \begin{pmatrix}
+                15 & 9\\
+                12 & 6
+            \end{pmatrix}\\
+            \Rightarrow DH=HD
+        \end{align*}
+        \item 
+        \begin{align*}
+            FH = \begin{pmatrix}
+                10 & 0\\
+                32 & 12
+            \end{pmatrix} \\
+            HF = \begin{pmatrix}
+                10 & 0\\
+                16 & 12
+            \end{pmatrix}\\
+            \Rightarrow FH\neq HF
+        \end{align*}
+        \item 
+        \begin{align*}
+            DF = \begin{pmatrix}
+                6 & 0\\
+                0 & 12
+            \end{pmatrix} \\
+            FD = \begin{pmatrix}
+                6 & 0\\
+                0 & 12
+            \end{pmatrix}\\
+            \Rightarrow DF=FD
+        \end{align*}
+        \item 
+        \begin{align*}
+            DG = \begin{pmatrix}
+                6 & 9\\
+                12 & 6
+            \end{pmatrix} \\
+            GD = \begin{pmatrix}
+                6 & 9\\
+                12 & 6
+            \end{pmatrix}\\
+            \Rightarrow DG=GD
+        \end{align*}
+        \item 
+        \begin{align*}
+            GH = \begin{pmatrix}
+                10 & 9\\
+                28 & 6
+            \end{pmatrix} \\
+            HG = \begin{pmatrix}
+                34 & 9\\
+                36 & 12
+            \end{pmatrix}\\
+            \Rightarrow GH\neq HG
+        \end{align*}
+    \end{enumerate}
+
+    \section{Aufgabe (b)}
+    
+    \begin{align*}
+        AB = \begin{pmatrix}
+            b_1 - 12 & 2b_2-4 \\
+            3b_1 + 6 & -b-12
+        \end{pmatrix} = \\
+        BA = \begin{pmatrix}
+            b_1 - 12 & 2b_1 + 4 \\
+            3b_2 - 6 & -b_2-12
+        \end{pmatrix}\\
+        \Rightarrow \forall b_2 \in \mathbb{R}: b_1 = 4 - b_2 \Rightarrow AB = BA\\ 
+        \Leftrightarrow b_1 \neq 4 - b_2 \Rightarrow BA \neq AB
+    \end{align*}
+    \newpage
+
+    \begin{gather*}
+        AC = \begin{pmatrix}
+            a + 2c & b + 2d \\
+            4a - c & 3b - d
+        \end{pmatrix} = \\
+        CA = \begin{pmatrix}
+            a + 3b & 2a - b \\
+            c + 3d & 2c - d
+        \end{pmatrix}\\
+        \Rightarrow\\ 
+        a + 2c = a + 3b, \\
+        b + 2d = 2a - b, \\
+        4a - c = c + 3d, \\
+        3b - d = 2c - d \\
+        \Leftrightarrow\\
+        3b -2c = 0\\
+        a -b -d = 0\\
+        4a - 2c - 3d=0\\
+        3b - 2c = 0\\
+        \Leftrightarrow\\
+        \forall \alpha \in \mathbb{R}: a = 0, b = \alpha, c = \frac{3\alpha}2, d = -\alpha \Leftrightarrow AC = CA
+    \end{gather*}
+
+    \section{Aufgabe (c)}
+
+    \begin{enumerate}[(i)]
+        \item $EFG + EFG = 2EFG$, da $EFG:=A, EFG + EFG = A + A \Leftrightarrow (A+A)_{ij} = 2(A)_{ij}$
+        \item $EFG + EGF \neq 2EFG$, da $\exists E, F, G: EFG \neq EGF$
+        \item $G(H+E) = GE + GH$, da $G(H+E)=GH + GE = GE + GH$, (Assoziativgesetz über Addition)
+        \item $ EF EF G + F EEF G + E^2F^2G \neq 3E^2F^2G$, da $\exists E, F: EF \neq FE$
+        \item $EGHH+ EGGH = (EGH + EG^2)H$, da $(B + C)A = BA + CA$ und $E(GG) = (EG)G$
+        \item $(GH)^2 \neq G^2H^2$, da $(GH)(GH) = GHGH \neq GGHH$
+    \end{enumerate}
+
+
+\end{document}
