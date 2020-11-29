@@ -1,0 +1,77 @@
+
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper]{geometry}
+\usepackage[shortlabels]{enumitem}
+\usepackage{hyperref}
+
+\makeatletter
+\renewcommand{\@seccntformat}[1]{}
+\makeatother
+
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+\setlength\parindent{0pt}
+
+\title{Analysis Übung 4}
+\author{Ahmed Bajra}
+\date{2020-10-16}
+
+\begin{document}
+    \maketitle
+
+    \section{Aufgaben + Theorie}
+    A1) $f: x \mapsto x^3$
+
+    \begin{align*}
+        f'(x)=& \lim_{h\to0} \frac{(x+h)-f(x)}h\\
+        =& \lim_{h\to0} \frac{(x+h)^3 - x^3}h\\
+        =& \lim_{h\to0} \frac{x^3 + 3x^2h + 3xh^2 + h^3 - x^3}h\\
+        =& \lim_{h\to0} \frac{3x^2h + 3xh^2 + h^3}h = 3x^2 + 3xh + h^2\\
+        =& 3x^2
+    \end{align*}
+
+    A2) Ist $f(x)$ differenzierbar
+    \[
+        f(x)=\begin{cases}
+            0, &x\leq 0\\ 
+            x, &x>0
+        \end{cases}
+    \]
+
+    \begin{align*}
+        x\leq0: f'(x)&=\lim_{h\to0} \frac{(x+h)-f(x)}h\\ 
+        &=0\\
+        x>0: f'(x)&=\lim_{h\to0} \frac{(x+h)-f(x)}h\\ 
+        &=1\\
+        &\Rightarrow \text{Nicht differenzierbar}
+    \end{align*}
+
+    \newpage
+
+    A3)
+    \begin{enumerate}[1)]
+        \item $f_1(x) = (1-x)^5$
+
+        $f_1'(x) = -5(1-x)^4$
+        \item $f_2(x) = (\sqrt{x}+\cos{x})^18$
+
+        $f_2'(x) = 18(\sqrt{x}+\cos x)^{17} (\frac1{2\sqrt{x}}-\sin x)$
+        \item $f_3(x)=x^x$
+
+        $f_3'(x) = \frac{d}{dx}e^{x\log(x)} = (\log(x)+1)x^x$
+        \item $f_4(x)$ is die Inverse von $h_4(x)=\frac12 \cos(x)$
+
+        (Tipp: $\sin(\arccos(\alpha))=\sqrt{1-\cos(\arccos(\alpha))^2}$)
+
+        $f_4'(x)= h_4^{-1}(x)'$
+
+        $f_4'(x)=\frac1{-\frac12\sin(\arccos(2x))}=-\frac2{\sqrt{1-4x^2}}$
+    \end{enumerate}
+
+\end{document}

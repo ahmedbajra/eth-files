@@ -1,0 +1,147 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper]{geometry}
+\usepackage[shortlabels]{enumitem}
+\usepackage{hyperref}
+\usepackage{tikz}
+\makeatletter
+\renewcommand{\@seccntformat}[1]{}
+\makeatother
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+\makeatletter
+\newcommand*{\mtx}[1]{\begin{pmatrix}#1\end{pmatrix}}
+\makeatother
+\setlength\parindent{0pt}
+\title{Bonusaufgaben 5}
+\author{Ahmed Bajra}
+\date{2020-11-29}
+\begin{document}
+	\maketitle
+	\section{Aufgabe (a)}
+	\label{Aufgabe_(a)}
+	\begin{align*}
+		\vec{a} =& \mtx{2\\4} \\
+		\vec{b} =& \mtx{5\\8}
+	\end{align*}
+	\begin{align*}
+		A:& \vec{a} = \mtx{2\\0} + \frac43\mtx{0\\3} \\
+		  & \vec{b} = \frac52\mtx{2\\0} + \frac83\mtx{0\\3}
+	\end{align*}
+
+	
+	\begin{center}\begin{tikzpicture}[scale=0.3]
+		\draw[<->, thin] (-10, 0) -- (10, 0);
+		\draw[<->, thin] (0, -10) -- (0, 10);
+		\node[red] at (1,3) {$\vec{a}$};
+		\draw[->, red, very thick] (0, 0) -- (2,4);
+		\node[blue] at (3.5,7) {$\vec{b}$};
+		\draw[->, blue, very thick] (0,0) -- (5,8);
+
+		\draw[->, very thick] (0,0) -- (2,0) -- (2,4);
+		\draw[->, very thick] (0,0) -- (5,0) -- (5,8);
+	\end{tikzpicture}\end{center}
+
+	\newpage
+
+	\begin{align*}
+		B:& \vec{a} = 2\mtx{1\\0} + 4\mtx{0\\1}\\
+		  & \vec{b} = 5\mtx{1\\0} + 8\mtx{0\\1}
+	\end{align*}
+
+	
+	\begin{center}\begin{tikzpicture}[scale=0.3]
+		\draw[<->, thin] (-10, 0) -- (10, 0);
+		\draw[<->, thin] (0, -10) -- (0, 10);
+		\node[red] at (0.5,3) {$\vec{a}$};
+		\draw[->, red, very thick] (0, 0) -- (2,4);
+		\node[blue] at (3.5,7) {$\vec{b}$};
+		\draw[->, blue, very thick] (0,0) -- (5,8);
+		
+		\draw[->, very thick] (0,0) -- (2,0) -- (2,4);
+		\draw[->, very thick] (0,0) -- (5,0) -- (5,8);
+	\end{tikzpicture}\end{center}
+
+	\begin{align*}
+		C:& \vec{a} = 2\mtx{1\\2}\\
+		  & \vec{b} \text{ keine mögliche Linearkombination}
+	\end{align*}
+
+	\begin{center}\begin{tikzpicture}[scale=0.3]
+		\draw[<->, thin] (-10, 0) -- (10, 0);
+		\draw[<->, thin] (0, -10) -- (0, 10);
+		\node[red] at (2,3) {$\vec{a}$};
+		\draw[->, red, very thick] (0, 0) -- (2,4);
+		
+		\draw[->, very thick] (0,0)-- (1,2);
+		\draw[->, very thick] (0,0)-- (2,4);
+	\end{tikzpicture}\end{center}
+
+	\newpage
+
+	\begin{align*}
+		D:& \vec{a} = 2\mtx{1\\2} \text{ (siehe C)}\\
+		  & \vec{b} = \frac52\mtx{1\\2} + \frac12\mtx{5\\6}
+	\end{align*}
+
+	\begin{center}\begin{tikzpicture}[scale=0.3]
+		\draw[<->, thin] (-10, 0) -- (10, 0);
+		\draw[<->, thin] (0, -10) -- (0, 10);
+		\node[blue] at (3.5,4.5) {$\vec{b}$};
+		\draw[->, blue, very thick] (0,0) -- (5,8);
+	
+		\draw[->, very thick] (0,0) -- (2.5,5);
+		\draw[->, very thick] (2.5,5) -- (5,8);
+	\end{tikzpicture}\end{center}
+
+	\begin{align*}
+		E:& \vec{a} = \frac12\mtx{4\\8}\\
+		  & \vec{b} \text{ keine mögliche Linearkombination}
+	\end{align*}
+
+	\begin{center}\begin{tikzpicture}[scale=0.3]
+		\draw[<->, thin] (-10, 0) -- (10, 0);
+		\draw[<->, thin] (0, -10) -- (0, 10);
+		\node[red] at (1,3) {$\vec{a}$};
+		\draw[->, red, very thick] (0, 0) -- (2,4);
+		
+		\draw[->, very thick] (0,0) -- (4,8);
+		\draw[->, very thick] (0,0) -- (2,4);
+	\end{tikzpicture}\end{center}
+
+	\newpage
+
+	\subsection{Fazit}
+	Um einen Vektor $\vec{v} \in \mathbb{R}^2$ mit einer Linearkombination $L: \{\vec{v}_1, ...\vec{v}_n\} \mapsto a_1\vec{v}_1 + ... + a_n\vec{v}_n$ von Vektoren 
+	aus einer Menge $M$ abzubilden ($L(M)=\vec{v}$), muss entweder mindestens ein Vektor $\vec{u} \in M$ 
+	kollinear zu $\vec{v}$ sein oder es zwei Vektoren $\vec{u}, \vec{w} \in M$ linear 
+	unabhängig zueinander sein, es gilt also:
+
+	\begin{align*}
+		\exists L: \{\vec{v}_1, ...\vec{v}_n\} \mapsto a_1\vec{v}_1 + ... + a_n\vec{v}_n, M\subset\mathbb{R}^2&: L(M)=\vec{v} \\
+		\Leftrightarrow \exists\vec{v}_i\in M: k\vec{v}_i = \vec{v} 
+		\text{ oder } \exists\{\vec{v}_i, \vec{v}_j\} \subset M\backslash\{\vec0\}&: k\vec{v}_i\neq\vec{v}_j
+	\end{align*}
+
+	\section{Aufgabe (b)}
+	
+	Da es sich hier stehts um Polynome ersten Grades handelt, kann die Form $p(t)=at+b$ zu einem Vektor $\vec{p}=\mtx{a\\b}$ umgeschrieben werden.
+
+	Die für Linearkombinationen relevanten Operationen sind in beiden Formen analog:
+
+	\begin{align*}
+		p_1(t)=a_1t+b_1, & p_2(t)=a_2t+b_2\\
+		\vec{p}_1=\mtx{a_1\\b_1}, & \vec{p}_2=\mtx{a_2\\b_2}\\
+		\text{Addition: }& p_1(t)+p_2(t) = (a_1+a_2)t + (b_1+b_2)\\
+						 & \vec{p}_1+\vec{p}_2 = \mtx{a_1+a_2 \\ b_1+b_2} \rightarrow \text{ entspricht: } (a_1+a_2)t + (b_1+b_2)\\
+		\text{Multiplikation mit skalarem Wert: }& kp_1(t) = ka_1t+k_b1\\
+												 & k\vec{p}_1 = \mtx{ka_1\\kb_1} \rightarrow \text{ entspricht: } ka_1t+kb_1
+	\end{align*}
+	
+	Übersetzt man alle gegebenen Polynome in die oben genannte Vektordarstellung, kommt man zu denselben Lösungen wie bei \nameref{Aufgabe_(a)}.
+
+\end{document}

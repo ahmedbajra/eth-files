@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper]{geometry}
+\usepackage[shortlabels]{enumitem}
+\usepackage{hyperref}
+\makeatletter
+\renewcommand{\@seccntformat}[1]{}
+\makeatother
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+\newcommand{\ul}[1]{\underline{#1}}
+\setlength\parindent{0pt}
+\title{Mechanik Hausübung Serie 4}
+\author{Ahmed Bajra}
+\date{2020-10-09}
+\begin{document}
+	\maketitle
+	
+	\section{Aufgabe 1}
+	Ein Würfel hat im Punkt $G$ die Kinemate $\ul{v}_G= \begin{pmatrix}0\\ v \\2v\end{pmatrix}$, $\ul{\omega}=\begin{pmatrix}\frac{v}a\\\frac{v}a\\-\frac{v}a\end{pmatrix}$
+	
+	Berechnen Sie die Kinemate im Punkt $D$ und im Punkt $A$.
+
+	\section{Lösung}
+
+	\begin{align*}
+		\ul{v}_G=&\ul{v}_D + \ul{\omega}\times\ul{DG}\\
+		\ul{DG}=&\begin{pmatrix}-a\\-a\\a\end{pmatrix}\\
+		\Rightarrow \ul{v}_G =& \ul{v}_D + \ul0 = \ul{v}_D\\\\
+		\ul{v}_G =& \ul{v}_A + \ul\omega\times\ul{AG}\\
+		=& \ul{v}_A + \begin{pmatrix}v\\-v\\0\end{pmatrix}\\
+		\Leftrightarrow \ul{v}_A =& \ul{v}_G - \begin{pmatrix}v\\-v\\0\end{pmatrix}\\
+		=& \begin{pmatrix}-v\\2v\\2v\end{pmatrix}
+	\end{align*}
+
+	\section{Aufgabe 2}
+	Ein Wurfel führt eine Rotation aus. In der gezeichneten speziellen Lage des 
+	Würfels fallen die Kanten $\ul{AB}, \ul{AH}$ und $\ul{AG}$ mit den Achsen $\ul{x}, \ul{y}$ bzw. $\ul{z}$ 
+	des Koordinatensystemszusammen. In dieser Lage sind die Geschwindigkeiten der Punkte C bzw. F in kartesischen Komponenten
+
+\end{document}
